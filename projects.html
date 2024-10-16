@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Tri Puji Antoro</title>
+    <title>Projects - Tri Puji Antoro</title>
     <style>
         body { 
             font-family: 'Poppins', sans-serif; 
@@ -21,12 +21,12 @@
             margin: auto;
             padding: 2rem;
         }
-        a {
-            color: #f39c12;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #e67e22;
+        .project {
+            background: #f39c12;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            color: #fff;
         }
     </style>
 </head>
@@ -34,15 +34,26 @@
     <header>
         <nav>
             <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
             <a href="skills.html">Skills</a> |
-            <a href="projects.html">Projects</a> |
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm Tri Puji Antoro, a passionate Full Stack Developer with 5 years of experience in creating robust web applications...</p>
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1: E-Commerce Website</h3>
+            <p>A full-featured e-commerce platform using React, Node.js, and MongoDB...</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: Personal Blog</h3>
+            <p>A clean and responsive personal blog built with Django and Bootstrap...</p>
+        </div>
+        <div class="project">
+            <h3>Project 3: Task Management App</h3>
+            <p>A task management app with real-time updates using WebSockets and Flask...</p>
+        </div>
     </section>
 
     <footer>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Tri Puji Antoro</title>
+    <title>Contact - Tri Puji Antoro</title>
     <style>
         body { 
             font-family: 'Poppins', sans-serif; 
@@ -21,12 +21,23 @@
             margin: auto;
             padding: 2rem;
         }
-        a {
-            color: #f39c12;
-            text-decoration: none;
+        form {
+            background: #f39c12;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
         }
-        a:hover {
-            color: #e67e22;
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #333;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -34,15 +45,20 @@
     <header>
         <nav>
             <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
             <a href="skills.html">Skills</a> |
-            <a href="projects.html">Projects</a> |
-            <a href="contact.html">Contact</a>
+            <a href="projects.html">Projects</a>
         </nav>
     </header>
 
     <section class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm Tri Puji Antoro, a passionate Full Stack Developer with 5 years of experience in creating robust web applications...</p>
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="6" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
     </section>
 
     <footer>

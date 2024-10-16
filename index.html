@@ -1,70 +1,147 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contoh Hyperlink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Puji Antoro - Programmer Portfolio</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            overflow-x: hidden;
         }
-
-        hr {
-            border: none;
-            border-top: 3px solid blue;
-            width: 50%;
-            margin-left: 0;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 2rem;
         }
-
-        nav a {
-            color: red;
+        header {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+        header.scrolled {
+            background: rgba(51, 51, 51, 1);
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header ul {
+            display: flex;
+            list-style: none;
+        }
+        header ul li {
+            margin-left: 1.5rem;
+        }
+        header a {
+            color: #fff;
             text-decoration: none;
-            font-size: 18px;
-            margin-right: 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
         }
-
-        nav a:hover {
-            text-decoration: underline;
+        header a:hover {
+            color: #f39c12;
         }
-
-        .content {
-            font-size: 16px;
-            color: #333;
-            line-height: 1.5;
-        }
-
-        .content a {
-            color: blue;
+        .btn {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            transition: background 0.3s ease;
             text-decoration: none;
+            font-size: 1.2rem;
         }
-
-        .content a:hover {
-            text-decoration: underline;
+        .btn:hover {
+            background: #e67e22;
+        }
+        section {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        #home {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('your-image.jpg') no-repeat center center/cover;
+        }
+        #home h1 {
+            font-size: 3.5rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
         }
     </style>
 </head>
 <body>
 
-    <hr>
+    <header id="header">
+        <nav class="container">
+            <h1 id="logo">TPA</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="home.html">Home</a> |
-        <a href="profil.html">Profil</a> |
-        <a href="about.html">About</a> |
-        <a href="galery.html">Gallery</a> |
-        <a href="kontak.html">Kontak</a>
-    </nav>
+    <section id="home">
+        <div>
+            <h1>Tri Puji Antoro</h1>
+            <p>Full Stack Developer</p>
+            <a href="projects.html" class="btn">View My Work</a>
+        </div>
+    </section>
 
-    <hr>
+    <footer>
+        <p>&copy; 2024 Tri Puji Antoro. All rights reserved.</p>
+    </footer>
 
-    <div class="content">
-        <p>Assalammualaikum.Wr.Wb.<br>
-        Apa kabar semua. Salam kenal, ini adalah web perdanaku. Web ini berisi informasi tentang kegemaranku. <br>
-        Semoga web ini dapat menginspirasi Anda pada waktu liburan.</p>
-
-        <p>Silakan cari informasi lebih lanjut di <a href="http://www.google.com" target="_blank">Google</a> atau
-        hubungi saya jika ada yang ingin didiskusikan melalui <a href="mailto:tripujiantoro@gmail.com">email</a>.</p>
-    </div>
-
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
